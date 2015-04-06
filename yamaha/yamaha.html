@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    RED.nodes.registerType('yamaha',{
+        category: 'output',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+	server:{value:""}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "file.png",
+        label: function() {
+            return this.name||"Yamaha RXV";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="yamaha">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row node-input-server">
+         <label for="node-input-server"><i class="fa fa-server"></i> Server</label>
+         <input type="text" id="node-input-server" placeholder="Server">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="yamaha">
+    <p>A node that controls the yamaha avr system</p>
+</script>
+
+
